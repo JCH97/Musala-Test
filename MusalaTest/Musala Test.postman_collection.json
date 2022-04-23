@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "d4e2dff8-085a-4879-be19-d1534fde3b95",
+		"name": "Musala Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"G1\",\n    \"Ip\": \"192.168.43.1\",\n    \"PeripheralDevices\": [\n        {\n            \"Vendor\": \"Vendor 1\",\n            \"Status\": 0\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/gateway",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"gateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/gateway/a2fe97cd-c5f8-44ec-b021-9098ecf0098d",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"gateway",
+						"a2fe97cd-c5f8-44ec-b021-9098ecf0098d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"GatewayId\": \"a2fe97cd-c5f8-44ec-b021-9098ecf0098d\",\n    \"Vendor\": \"Vendor 2\",\n    \"Status\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/gateway/add-device",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"gateway",
+						"add-device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove device",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/devices/e26b9eec-c7e5-451a-87af-8f863326dfd6",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"devices",
+						"e26b9eec-c7e5-451a-87af-8f863326dfd6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
